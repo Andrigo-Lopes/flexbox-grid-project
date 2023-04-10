@@ -1,0 +1,176 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+}
+.header{
+    width: 100%;
+    min-height: 40px;
+    background-color: rgb(39, 38, 38);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 8px 15px;
+    margin-bottom: 50px;
+}
+.logoImgNavbar{
+    width: 180px;
+}
+.headerBtn{
+    display: flex;
+    gap: 15px;
+}
+.btnNavbar{
+    font-size: 16px;
+    padding: 6px;
+    background-color: transparent;
+    border: 2px solid transparent;
+    color: aliceblue;
+    cursor: pointer;
+}
+.btnNavbar:hover{
+    border-bottom: 2px solid rgb(255, 255, 255);
+    transition: 1s;
+}
+.title{
+    font-size: 26px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.titleDescription{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #383838;
+}
+.gridContainer{
+    display: grid;
+    grid-template-columns:3fr 1fr ;
+    grid-template-areas: 'mainContent sideBarContent';
+    padding: 20px;
+    flex: 1 0 auto;  
+}
+
+.mainContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    grid-area: mainContent;
+    margin-top: 50px;
+}
+
+.categoryCard{
+    width: 380px;
+    height: 480px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition:0.5s ;
+    cursor: pointer;
+}
+.mainCardImg{
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+}
+.categoryCard:hover{
+    border-color: black;
+}
+.mainCategoryCardTitle{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+}
+.mainCategoryCardDescription{
+    padding: 5px;
+    font-size: 16px;
+}
+.sideBarContent{
+    background-color: #383838;
+    color: aliceblue;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: sideBarContent;
+    gap: 10px
+}
+.sideBarCard{
+    width: 75%;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: 0.5;
+    cursor: pointer;
+}
+.sideBarCardImg{
+    width: 100%;
+    border-radius: 10px;
+}
+.sideBarCardTitle{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 10px;
+}
+.sideBarCard:hover{
+    border-color: gainsboro;
+}
+
+.footer{
+    width: 100%;
+    min-height: 40px;
+    background-color: #383838;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    gap: 15px;
+}
+.logoFooter{
+    width: 180px;
+}
+.footerAncor{
+    color: aliceblue;
+    text-decoration: none;
+}
+@media (max-width: 1000px){
+    .categoryCard{
+        width: 280px;
+        height: 380px;
+    }
+}
+@media (max-width: 700px){
+    .gridContainer{
+        grid-template-areas: 
+        'mainContent'
+        'sideBarContent';
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .sideBarContent{
+        min-width: auto;
+    }
+    .footerAncor{
+        font-size: 19px;
+    }
+   
+}
+@media (max-width: 500px){
+    .header{
+        justify-content: center;
+    }
+    .footer{
+        justify-content: center;
+    }
+}
